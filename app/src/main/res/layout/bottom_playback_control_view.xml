@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llBottomPlaybackControl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp">
+
+            <FrameLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:id="@+id/imgBottomPoster"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/image" />
+
+                <include layout="@layout/bottom_item_view_progress" />
+
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvBottomTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgBottomPrevious"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:src="@drawable/previous"
+            app:tint="@color/darkGrey1" />
+
+        <ImageView
+            android:id="@+id/imgBottomPlayPause"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:padding="6dp"
+            android:src="@drawable/play"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/imgBottomNext"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:src="@drawable/next"
+            app:tint="@color/darkGrey1" />
+
+    </LinearLayout>
+
+</LinearLayout>
